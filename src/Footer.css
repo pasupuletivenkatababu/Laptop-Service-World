@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   min-height: 520px;
-  padding-bottom: 4rem;
+  padding-bottom: 2.25rem;
   color: #ffffff;
   background: linear-gradient(135deg, #102a4d 0%, #0a1e3a 100%);
   overflow: hidden;
@@ -18,7 +18,7 @@
 .footer-content {
   position: relative;
   z-index: 1;
-  padding: 4rem 0 2rem;
+  padding: 2.25rem 0 1.5rem;
 }
 
 .footer-inner {

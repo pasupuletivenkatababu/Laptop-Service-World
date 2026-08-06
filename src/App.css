@@ -180,7 +180,7 @@ body {
 }
 
 .section-spacing {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 @media (max-width: 1440px) {
@@ -192,7 +192,7 @@ body {
 /* Large Mobile */
 @media (max-width: 767px) {
   .section-spacing {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 
   h1 {

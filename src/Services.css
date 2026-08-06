@@ -2,7 +2,7 @@
   background: #f7faff;
   position: relative;
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 3.25rem 0;
 }
 
 .section-header {
@@ -26,7 +26,7 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 1.75rem;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
   position: relative;
   z-index: 1;
@@ -35,7 +35,7 @@
 .service-card {
   background: #fff;
   border-radius: 1.75rem;
-  padding: 1.5rem;
+  padding: 1.125rem;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
   transition: transform 250ms ease, box-shadow 250ms ease;
   overflow: hidden;
@@ -52,10 +52,10 @@
 
 .service-media {
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
   border-radius: 1.5rem;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1rem;
   background: #f8fafc;
 }
 
@@ -68,7 +68,7 @@
 
 .service-card h3 {
   font-size: 1.35rem;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
   color: #0f172a;
 }
 
@@ -140,7 +140,7 @@
   }
 
   .service-card {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .service-media {

@@ -135,7 +135,7 @@
 /* Contact Form */
 .contact-form-section {
   background: white;
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 1rem;
   color: var(--text-dark);
   box-shadow: var(--shadow-lg);
