@@ -1,89 +1,17 @@
 import React, { useState } from 'react';
 import "../Searchbar.css";
 import FlowImage from "../assets/flow.jpeg";
-import ContactModal from './ContactModel';
+import serviceData from '../data/servicesData';
 
-const SearchBar = () => {
+const SearchBar = ({ onBookService }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState('');
+  const [selectedServiceObject, setSelectedServiceObject] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedModalService, setSelectedModalService] = useState(null);
+  const [searchResults, setSearchResults] = useState([]);
+  const [hasSearched, setHasSearched] = useState(false);
 
-  const services = [
-    {
-      title: 'Motherboard Repair',
-      price: '₹1,999',
-      warranty: '30 Days Warranty',
-      repairTime: '24 Hours'
-    },
-    {
-      title: 'Software Issues',
-      price: '₹999',
-      warranty: 'No Warranty',
-      repairTime: '2 Hours'
-    },
-    {
-      title: 'Screen Replacement',
-      price: '₹3,999',
-      warranty: '90 Days Warranty',
-      repairTime: '2 Hours'
-    },
-    {
-      title: 'Battery Replacement',
-      price: '₹1,999',
-      warranty: '6 Months - 1 Year Warranty',
-      repairTime: '1-2 Hours'
-    },
-    {
-      title: 'RAM Upgrade',
-      price: '₹2,999',
-      warranty: '2 Years Warranty',
-      repairTime: '1-2 Hours'
-    },
-    {
-      title: 'SSD Upgrade',
-      price: '₹5,999',
-      warranty: '5 Years Warranty',
-      repairTime: '1-2 Hours'
-    },
-    {
-      title: 'Keyboard Replacement',
-      price: '₹1,999',
-      warranty: '3 Months Warranty',
-      repairTime: '3 Hours'
-    },
-    {
-      title: 'Hinges Replacement',
-      price: '₹2,500',
-      warranty: '1 Month Warranty',
-      repairTime: '3 Hours'
-    },
-    {
-      title: 'Laptop Panel Replacement',
-      price: '₹2,999',
-      warranty: 'No Warranty',
-      repairTime: '3 Hours'
-    },
-    {
-      title: 'Cleaning & Maintenance',
-      price: '₹999',
-      warranty: 'No Warranty',
-      repairTime: '2 Hours'
-    },
-    {
-      title: 'Charging Portable',
-      price: '₹1,999',
-      warranty: 'No Warranty',
-      repairTime: '3 Hours'
-    },
-    {
-      title: 'Laptop Cooling Fan Replacement',
-      price: '₹1,500',
-      warranty: 'No Warranty',
-      repairTime: '2 Hours'
-    }
-  ];
+  const services = serviceData.map((service) => service.title);
 
   const brands = [
     'Dell',
@@ -137,17 +65,20 @@ const SearchBar = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const serviceData = services.find((service) => service.title === selectedService);
-    setSelectedModalService(
-      serviceData || {
-        title: 'Laptop Repair Service',
-        price: 'Starting from ₹999',
-        warranty: 'Varies by service',
-        repairTime: 'Varies by issue',
-        description: 'Select a service above to get an exact price, warranty, and repair time.'
-      }
-    );
-    setIsModalOpen(true);
+    if (selectedServiceObject) {
+      onBookService(selectedServiceObject);
+      return;
+    }
+    runSearch();
+  };
+
+  const handleQuickSearch = (brand, service, query) => {
+    setSelectedBrand(brand);
+    setSelectedService(service);
+    const selected = serviceData.find((item) => item.title === service);
+    setSelectedServiceObject(selected || null);
+    setSearchTerm(query);
+    runSearch(brand, service, query);
   };
 
   return (
@@ -179,12 +110,17 @@ const SearchBar = () => {
                 <select
                   id="service"
                   value={selectedService}
-                  onChange={(e) => setSelectedService(e.target.value)}
+                  onChange={(e) => {
+                    const title = e.target.value;
+                    setSelectedService(title);
+                    const selected = serviceData.find((service) => service.title === title);
+                    setSelectedServiceObject(selected || null);
+                  }}
                   className="form-control"
                 >
                   <option value="">-- Choose Service --</option>
                   {services.map((service) => (
-                    <option key={service.title} value={service.title}>{service.title}</option>
+                    <option key={service} value={service}>{service}</option>
                   ))}
                 </select>
               </div>
@@ -202,16 +138,6 @@ const SearchBar = () => {
           <div className="repair-flow">
             <img src={FlowImage} alt="Laptop Repair Process" />
           </div>
-
-          {isModalOpen && selectedModalService && (
-            <ContactModal
-              service={selectedModalService}
-              onClose={() => {
-                setIsModalOpen(false);
-                setSelectedModalService(null);
-              }}
-            />
-          )}
         </div>
       </div>
     </section>

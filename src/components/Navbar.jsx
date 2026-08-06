@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LSW from '../assets/LSW.jpeg';
 import '../Navbar.css';
 
 const Navbar = ({ isScrolled }) => {
@@ -22,10 +23,12 @@ const Navbar = ({ isScrolled }) => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         {/* Logo */}
-        <div className="navbar-brand">
+        <div className="navbar-brand" onClick={() => scrollToSection('hero')}>
           <div className="logo">
-            <span className="logo-icon">🔧</span>
-            <span className="logo-text">Laptop Service World</span> 
+            <img src={LSW} alt="Laptop Service World logo" className="logo-icon" />
+            <div>
+              <span className="logo-text">Laptop Service World</span>
+            </div>
           </div>
         </div>
 

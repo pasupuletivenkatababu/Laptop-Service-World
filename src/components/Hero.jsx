@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Hero.css';
-//import HeroImage from '../assets/kishu.jpeg';
-import HeroImage from '../assets/laptop.jpeg'
+import HeroImage from '../assets/laptop.jpeg';
 
 const Hero = () => {
   const scrollToSection = (id) => {
@@ -12,17 +11,25 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      id="hero"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgba(3, 18, 36, 0.9) 0%, rgba(3, 18, 36, 0.8) 40%, rgba(3, 18, 36, 0.95) 100%), url(${HeroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center right',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="container hero-content">
         <div className="hero-text">
           <h1 className="hero-title">
             Professional Laptop Repair at Your <span className="highlight">Doorstep</span>
           </h1>
-          <h1 className ="hero-subtitle1">
+          <p className="hero-subtitle">
             Free pickup and delivery, same-day support.
-          </h1>
-          
-          
+          </p>
+
           <div className="hero-buttons">
             <button className="btn btn-primary btn-lg" onClick={() => scrollToSection('services')}>
               Get Service Now

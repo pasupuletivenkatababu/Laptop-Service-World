@@ -61,7 +61,8 @@ function ContactSection() {
             <h3>Office  Location</h3>
             <p className="location-address">
               <strong>Laptop Service World</strong><br />
-              Sirius Cabin, 4th Floor, Bizness Square Building<br />
+               WorkFlo Hitex Bizness Square
+               4th Floor, Unit No. 405–411<br />
               Beside Kotak Bank HITEC City, Madhapur<br />
               Hyderabad, Telangana 500081<br />
               India
@@ -151,7 +152,9 @@ function ContactSection() {
                 <span>Chanda Nagar</span>
               </div>
             </div>
-            <p className="area-note">📍 <strong>Shop Location:</strong> Sirius Cabin, 4th Floor, Bizness Square Building, Beside Kotak Bank HITEC City, Madhapur. We serve these areas with doorstep service and nearby within 20 Kms.</p>
+            <p className="area-note">📍 <strong>Shop Location:</strong> WorkFlo Hitex Bizness Square
+               4th Floor, Unit No. 405–411, Beside Kotak Bank HITEC City, Madhapur. We serve these areas with doorstep
+               service and nearby within 20 Kms.</p>
           </div>
         </div>
 

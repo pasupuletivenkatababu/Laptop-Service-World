@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function ContactModal({ service, onClose }) {
-  const serviceName = service.name || service.title || 'Laptop Repair Service';
   const [contactMethod, setContactMethod] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -26,15 +25,15 @@ function ContactModal({ service, onClose }) {
 
   const handleEmailSubmit = (e) => {
     e.preventDefault();
-    const subject = `Service Request: ${serviceName}`;
-    const body = `Hi,\n\nI'm interested in ${serviceName} for my laptop.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nLocation: ${formData.location}\nMessage: ${formData.message}\n\nPrice: ${service.price || 'N/A'}\nWarranty: ${service.warranty || 'N/A'}`;
+    const subject = `Service Request: ${service.title}`;
+    const body = `Hi,\n\nI'm interested in ${service.title} for my laptop.\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nLocation: ${formData.location}\nMessage: ${formData.message}\n\nStarting From: ${service.price}\nWarranty: ${service.warranty}\nRepair Time: ${service.repairTime}`;
     
     window.location.href = `mailto:${businessEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     onClose();
   };
 
   const handleWhatsAppClick = () => {
-    const message = `Hi! I'm interested in ${serviceName} service. My name is ${formData.name || 'User'}, phone is ${formData.phone || 'Not provided'}, and I'm located at ${formData.location || 'Not specified'}. Can you provide more details?`;
+    const message = `Hi! I'm interested in ${service.title} service. My name is ${formData.name || 'User'}, phone is ${formData.phone || 'Not provided'}, and I'm located at ${formData.location || 'Not specified'}. Can you provide more details?\n\nStarting From: ${service.price}\nWarranty: ${service.warranty}\nRepair Time: ${service.repairTime}`;
     const whatsappUrl = `https://wa.me/${businessWhatsApp}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     onClose();
@@ -51,16 +50,14 @@ function ContactModal({ service, onClose }) {
         <button className="modal-close" onClick={onClose}>✕</button>
 
         <div className="modal-header">
-          <div>
-            <h2>Get {serviceName}</h2>
-            {service.description && <p className="service-description">{service.description}</p>}
-          </div>
+          <h2>Get {service.title}</h2>
         </div>
+        <p className="service-description">{service.description}</p>
 
-        <div className="service-meta">
-          {service.price && <span className="service-price">Starting From : {service.price}</span>}
-          {service.warranty && <span className="service-badge">Warranty: {service.warranty}</span>}
-          {service.repairTime && <span className="service-badge">Repair Time: {service.repairTime}</span>}
+        <div className="service-info-cards">
+          <div className="service-info-card">Starting From: {service.price}</div>
+          <div className="service-info-card">Warranty: {service.warranty}</div>
+          <div className="service-info-card">Repair Time: {service.repairTime}</div>
         </div>
 
         {!contactMethod ? (
