@@ -494,13 +494,27 @@ body {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  opacity: 0.95;
+  opacity: 1;
+  color: #ffffff;
 }
 
 .location-address strong {
   display: block;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #f59e0b;
+}
+
+.work-location-heading {
+  font-size: xx-large;
+  color: #ffffff;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.work-location-note {
+  font-size: 1.05rem;
+  
   font-weight: 600;
 }
 
@@ -561,6 +575,7 @@ body {
   line-height: 1.8;
   margin-bottom: 1.5rem;
   opacity: 0.95;
+  color: #ffffff;
 }
 
 .location-address strong {

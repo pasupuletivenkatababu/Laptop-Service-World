@@ -4,19 +4,9 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: radial-gradient(circle at top left, rgba(10, 132, 255, 0.16), transparent 32%),
-    linear-gradient(180deg, #031224 0%, #07172f 28%, #081b36 100%);
+  background-color: transparent;
   color: #f8fafc;
   padding: 3rem 0 3.5rem;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 28%),
-    radial-gradient(circle at bottom left, rgba(14, 165, 233, 0.14), transparent 24%);
-  pointer-events: none;
 }
 
 .hero-content {
@@ -34,11 +24,16 @@
 
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  /* match the hero title size but allow wrapping so it isn't cut off */
+  font-size: clamp(2.7rem, 2.7vw, 4rem);
+  font-weight: 700;
   color: rgba(248, 250, 252, 0.92);
-  margin-bottom: 2rem;
-  line-height: 1.7;
-  max-width: 576px;
+  margin-bottom: 1rem;
+  line-height: 1.05;
+  max-width: 700px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  overflow: visible;
 }
 
 .hero-buttons {
@@ -47,6 +42,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .hero-contact-links {

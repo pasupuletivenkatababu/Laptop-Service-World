@@ -15,7 +15,7 @@ const Hero = () => {
       className="hero"
       id="hero"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(3, 18, 36, 0.9) 0%, rgba(3, 18, 36, 0.8) 40%, rgba(3, 18, 36, 0.95) 100%), url(${HeroImage})`,
+        backgroundImage: `url(${HeroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center right',
         backgroundRepeat: 'no-repeat',
@@ -34,11 +34,7 @@ const Hero = () => {
             <button className="btn btn-primary btn-lg" onClick={() => scrollToSection('services')}>
               Get Service Now
             </button>
-            <button className="btn btn-secondary btn-lg" onClick={() => scrollToSection('services')}>
-              Explore Services
-            </button>
           </div>
-
           <div className="hero-contact-links" aria-label="Contact options">
             <a href="tel:+919166199299" className="hero-contact-link phone-link">
               <span className="hero-contact-icon">📞</span>

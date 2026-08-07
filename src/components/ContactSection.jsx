@@ -61,17 +61,13 @@ function ContactSection() {
             <h3>Office  Location</h3>
             <p className="location-address">
               <strong>Laptop Service World</strong><br />
-               WorkFlo Hitex Bizness Square
-               4th Floor, Unit No. 405–411<br />
+              WorkFlo Hitex Bizness Square 4th Floor, Unit No. 405–411<br />
               Beside Kotak Bank HITEC City, Madhapur<br />
               Hyderabad, Telangana 500081<br />
               India
             </p>
-            <br/>
-            
-              <strong> Work location </strong>
-              <p>KPHB NearBy Metro Station</p>
-           
+            <h3 className="work-location-heading">Work location</h3>
+            <p className="work-location-note">KPHB Nearby Metro Station</p>
           </div>
 
           {/* Service Area Coverage */}
