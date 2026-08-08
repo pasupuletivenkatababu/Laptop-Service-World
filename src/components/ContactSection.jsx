@@ -42,10 +42,10 @@ function ContactSection() {
           <div className="contact-method-card">
             <div className="method-icon-large">📧</div>
             <h3>Email</h3>
-            <p className="contact-detail">kishorlaptopserviceworld@gmail.com</p>
+            <p className="contact-detail">laptopserviceworld.in@gmail.com</p>
             <p className="contact-info">Send us your details and we will reply quickly.</p>
             <a
-              href="mailto:kishorlaptopserviceworld@gmail.com?subject=Laptop%20Repair%20Service%20Request&body=Hello%20Kishor%20Laptop%20Service%20World%2C%0A%0AI%20need%20help%20with%20my%20laptop.%0A%0APlease%20reply%20with%20the%20next%20steps." 
+              href="mailto:laptopserviceworld.in@gmail.com?subject=Laptop%20Repair%20Service%20Request&body=Hello%20Kishor%20Laptop%20Service%20World%2C%0A%0AI%20need%20help%20with%20my%20laptop.%0A%0APlease%20reply%20with%20the%20next%20steps." 
               className="contact-link"
             >
               Send Email
