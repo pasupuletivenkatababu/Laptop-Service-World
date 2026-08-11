@@ -7,7 +7,6 @@ import Services from './components/Services';
 import ContactModal from './components/ContactModel';
 
 import WhyChooseUs from './components/WhyChooseUs';
-import Testimonials from './components/Testimonials';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -42,7 +41,6 @@ function App() {
       <SearchBar onBookService={openServiceModal} />
       <Services onServiceSelect={openServiceModal} />
       <WhyChooseUs />
-      <Testimonials />
       <ContactSection />
       <Footer />
       {isModalOpen && selectedService && (
