@@ -242,7 +242,7 @@ href="tel:+919876543210"
 ### Email Integration
 ```javascript
 // Opens email client
-href="mailto:kishorlaptopserviceworld@gmail.com?subject=Laptop%20Repair%20Service"
+href="mailto:laptopserviceworld.in@gmail.com?subject=Laptop%20Repair%20Service"
 ```
 
 ## 🐛 Troubleshooting

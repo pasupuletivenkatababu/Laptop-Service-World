@@ -11,7 +11,7 @@ function ContactModal({ service, onClose }) {
   });
 
   const businessPhone = '+919166199299';
-  const businessEmail = 'kishorlaptopserviceworld@gmail.com';
+  const businessEmail = 'laptopserviceworld.in@gmail.com';
   const businessWhatsApp = '+919166199299';
   const businessLocation = 'Sirius Cabin, 4th Floor, Bizness Square Building, Beside Kotak Bank HITEC City, Madhapur, Hyderabad, Telangana 500081';
 

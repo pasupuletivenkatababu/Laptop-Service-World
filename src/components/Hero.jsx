@@ -49,7 +49,7 @@ const Hero = () => {
               <span className="hero-contact-icon">💬</span>
               <span className="hero-contact-label">WhatsApp</span>
             </a>
-            <a href="mailto:kishorlaptopserviceworld@gmail.com" className="hero-contact-link email-link">
+            <a href="mailto:laptopserviceworld.in@gmail.com" className="hero-contact-link email-link">
               <span className="hero-contact-icon">✉️</span>
               <span className="hero-contact-label">Email</span>
             </a>
