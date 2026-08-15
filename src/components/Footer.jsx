@@ -68,7 +68,7 @@ const Footer = () => {
                   </div>
                   <div className="info-item">
                     <span className="info-icon">📧</span>
-                    <a href="mailto:kishorlaptopserviceworld@gmail.com">laptopserviceworld.in@gmail.com</a>
+                    <a href="mailto:kishorlaptopserviceworld@gmail.com">h</a>
                   </div>
                   <div className="info-item">
                     <span className="info-icon">📍</span>
