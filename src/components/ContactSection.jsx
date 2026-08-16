@@ -160,11 +160,11 @@ function ContactSection() {
           <div className="service-hours">
             <div className="hour">
               <span className="day">Monday - Friday</span>
-              <span className="time">10:00 AM - 7:30 PM</span>
+              <span className="time">10:30 AM - 7:30 PM</span>
             </div>
             <div className="hour">
               <span className="day">Saturday</span>
-              <span className="time">11:30 AM - 5:00 PM</span>
+              <span className="time">11:30 AM - 7:00 PM</span>
             </div>
             <div className="hour">
               <span className="day">Sunday</span>
